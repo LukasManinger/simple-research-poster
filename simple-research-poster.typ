@@ -63,7 +63,7 @@
       width: 100%,
       height: 100%,
       grid(
-        columns: (1fr, 4fr, 1fr),
+        columns: (1fr, 5fr, 1fr),
         [],
         align(center + horizon)[#stack(
           spacing: 30pt,
@@ -104,7 +104,8 @@
 
   grid(
     columns: 1,
-    rows: (13%, 83%, 4%),
+    // rows: (13%, 83%, 4%),
+    rows: (13%, 85%, 2%),
     poster-header(
       title,
       author,
