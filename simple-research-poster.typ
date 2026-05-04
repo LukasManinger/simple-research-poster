@@ -25,6 +25,7 @@
     fill:   fill_color,
     inset:  20pt,
     radius: 10pt,
+    stroke: base-colors.bgcolor2 + 3pt,
     stack(
       align(center)[
         #(title-style)[#title]
