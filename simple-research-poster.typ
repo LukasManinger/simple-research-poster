@@ -1,4 +1,5 @@
 #import "@preview/valkyrie:0.2.2" as z
+#import "@preview/tiaoma:0.3.0"
 
 #let base-colors-schema = z.dictionary((
   bgcolor1:   z.color(),
@@ -52,6 +53,7 @@
   author,
   subtitle,
   logo,
+  url,
   base-colors,
 ) = {
   set text(fill: base-colors.textcolor2)
@@ -65,7 +67,7 @@
       height: 100%,
       grid(
         columns: (1fr, 8fr, 1fr),
-        [],
+        if url != none {tiaoma.qrcode(url, options: (scale: 5.0, fg-color: base-colors.textcolor2))} else [],
         align(center + horizon)[#stack(
           spacing: 30pt,
           title,
@@ -97,6 +99,7 @@
   base-colors:  none,
   subtitle:     none,
   logo:         none,
+  url:          none,
   doc,
 ) = {
   // validation
@@ -112,6 +115,7 @@
       author,
       subtitle,
       logo,
+      url,
       base-colors,
     ),
     doc,
