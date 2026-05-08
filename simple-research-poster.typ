@@ -109,7 +109,7 @@
   grid(
     columns: 1,
     // rows: (13%, 83%, 4%),
-    rows: (13%, 85%, 2%),
+    rows: (12%, 86%, 2%),
     poster-header(
       title,
       author,
